@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Bookings | Binti Tents & Events</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Book tents and event services with site visit and add-ons." />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Binti Logo"></a></div>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="tents.html">Tents</a></li>
+          <li><a href="bookings.html" class="active">Bookings</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn-primary" href="checkout.html">Checkout</a>
+      <button id="hamburger" class="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <section class="page-hero" style="background-image:url('images/BC11.jpg')">
+    <div class="hero-overlay">
+      <div class="container hero-inner">
+        <h1>Book Your Event</h1>
+        <p class="lead">Select tent, add-ons and provide venue location. Pricing updates live.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <form id="booking-form" class="booking-form" novalidate>
+      <h2>Booking Form</h2>
+
+      <label for="fullname">Full name</label>
+      <input id="fullname" name="fullname" required>
+
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" type="tel" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="tent-type">Tent Type</label>
+      <select id="tent-type" name="tent_type" required>
+        <option value="">-- Select --</option>
+        <option value="stretch">Stretch Tent (KES 250/m²)</option>
+        <option value="cheese">Cheese Tent (KES 15,000)</option>
+        <option value="aframe">A-frame (KES 40,000 per section)</option>
+        <option value="bline">B-line (KES 30,000)</option>
+      </select>
+
+      <div id="stretch-options" class="conditional-input" aria-hidden="true">
+        <label for="stretch-size">Stretch Tent Size</label>
+        <select id="stretch-size" name="stretch_size">
+          <option value="">-- Select size --</option>
+          <option value="22x15">22 x 15</option>
+          <option value="10x12">10 x 12</option>
+          <option value="9x8">9 x 8</option>
+          <option value="10x7.5">10 x 7.5</option>
+        </select>
+      </div>
+
+      <div id="cheese-options" class="conditional-input" aria-hidden="true">
+        <label for="cheese-color">Cheese Tent Color</label>
+        <select id="cheese-color" name="cheese_color">
+          <option value="">-- Select color --</option>
+          <option value="white">White</option>
+          <option value="blue">Blue</option>
+          <option value="pink">Pink</option>
+          <option value="yellow">Yellow</option>
+        </select>
+      </div>
+
+      <div id="aframe-options" class="conditional-input" aria-hidden="true">
+        <label for="aframe-sections">Number of A-frame sections</label>
+        <select id="aframe-sections" name="aframe_sections">
+          <option value="1">1 section</option>
+          <option value="2">2 sections</option>
+          <option value="3">3 sections</option>
+        </select>
+      </div>
+
+      <h3>Add-ons</h3>
+      <label><input type="checkbox" id="lighting"> Lighting (+KES 20,000)</label><br>
+      <label><input type="checkbox" id="decor"> Decor (Upon Inquiry)</label><br>
+      <label><input type="checkbox" id="transport"> Transport (Nairobi) (+KES 7,000)</label><br>
+      <label><input type="checkbox" id="sitevisit"> Request Site Visit (KES 1,500 in Nairobi)</label>
+
+      <label for="venue">Venue location (address)</label>
+      <input id="venue" name="venue" type="text" placeholder="e.g., Westlands, Nairobi" required>
+
+      <h3>Booking Summary (live)</h3>
+      <div id="booking-summary" class="booking-summary"><p>No selections yet.</p></div>
+
+      <div class="form-actions">
+        <button id="proceed-checkout" type="submit" class="btn-primary">Proceed to Checkout</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left"><img src="images/logo.png" alt="Binti" class="footer-logo"><p class="caption">Instinctively Elegant</p></div>
+      <div class="footer-right"><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div><p>© 2025 Binti Tents & Events</p></div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/+254746170866" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+  <script src="script.js" defer></script>
+</body>
+</html>

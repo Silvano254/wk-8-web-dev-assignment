@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Contact | Binti Tents & Events</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Contact Binti Tents & Events for bookings, quotes and site visit arrangements." />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Binti Logo"></a></div>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="bookings.html">Bookings</a></li>
+        </ul>
+      </nav>
+      <a class="btn-primary" href="bookings.html">Book Now</a>
+      <button id="hamburger" class="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <section class="page-hero" style="background-image:url('images/BC11.jpg')">
+    <div class="hero-overlay">
+      <div class="container hero-inner">
+        <h1>Contact Us</h1>
+        <p class="lead">Get in touch for quotes, availability and bespoke packages.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="contact-grid">
+      <div class="message-container">
+        <h3>Contact details</h3>
+        <p>Phone: <a href="tel:+254746170866">+254 746 170 866</a></p>
+        <p>Email: <a href="mailto:info@bintievents.com">info@bintievents.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/254746170866">Chat with us</a></p>
+      </div>
+
+      <div class="message-container">
+        <h3>Send an enquiry</h3>
+        <form id="contact-form" action="#" method="POST">
+          <label for="cname">Name</label><input id="cname" name="name" required>
+          <label for="cemail">Email</label><input id="cemail" name="email" type="email" required>
+          <label for="cmessage">Message</label><textarea id="cmessage" name="message" rows="5" required></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="map" style="margin-top:18px">
+      <!-- placeholder google map embed - replace with your embed -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.69291377886!2d36.75796157019336!3d-1.3608993326498982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f05002bb0e439%3A0x4102c1c028957570!2sOUR%20MALL!5e0!3m2!1sen!2ske!4v1758453803190!5m2!1sen!2ske" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left"><img src="images/logo.png" alt="Binti" class="footer-logo"><p class="caption">Instinctively Elegant</p></div>
+      <div class="footer-right"><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div><p>© 2025 Binti Tents & Events</p></div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/254712345678" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+  <script src="script.js" defer></script>
+</body>
+</html>

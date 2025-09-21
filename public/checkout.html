@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Checkout | Binti Tents & Events</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Checkout and complete payment via Pesapal or M-Pesa STK push." />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Binti Logo"></a></div>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bookings.html">Bookings</a></li>
+          <li><a href="checkout.html" class="active">Checkout</a></li>
+        </ul>
+      </nav>
+      <button id="hamburger" class="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <section class="page-hero" style="background-image:url('images/BC11.jpg')">
+    <div class="hero-overlay">
+      <div class="container hero-inner">
+        <h1>Checkout</h1>
+        <p class="lead">Review your booking and choose a payment method.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="checkout-wrapper">
+      <h2>Order summary</h2>
+      <div id="order-summary" class="booking-summary"><p>Loading booking…</p></div>
+
+      <h3>Payment</h3>
+      <div class="payment-actions">
+        <button id="mpesa-pay" class="btn-primary">Pay with M-Pesa</button>
+        <button id="pesapal-pay" class="btn-gold">Pay with Pesapal</button>
+      </div>
+
+      <div id="pesapal-container" class="iframe-container" aria-live="polite" style="margin-top:18px">
+        <p class="muted">Pesapal payment window will load here after you click "Pay with Pesapal".</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left"><img src="images/logo.png" alt="Binti" class="footer-logo"><p class="caption">Instinctively Elegant</p></div>
+      <div class="footer-right"><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div><p>© 2025 Binti Tents & Events</p></div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/+254746170866" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+  <script src="script.js" defer></script>
+
+  <script>
+    // Pesapal button hookup (load iframe using loadPesapalIframe from script.js)
+    document.addEventListener('DOMContentLoaded', () => {
+      const pesapalBtn = document.getElementById('pesapal-pay');
+      const mpesaBtn = document.getElementById('mpesa-pay');
+      if (pesapalBtn) {
+        pesapalBtn.addEventListener('click', () => {
+          // in production, backend should provide a secure Pesapal iframe URL
+          const orderRef = 'BINTI-' + Date.now();
+          if (typeof loadPesapalIframe === 'function') loadPesapalIframe(orderRef);
+        });
+      }
+      if (mpesaBtn) {
+        mpesaBtn.addEventListener('click', () => {
+          alert('M-Pesa STK push will be triggered via your backend (Daraja). This is a placeholder.');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
