@@ -6,13 +6,7 @@ A premium, multi-page website for **Binti Tents & Events**, designed to elevate 
 
 ## 🌐 Live Website
 
-Visit the full site: [https://binti-events.vercel.app](https://binti-events.vercel.app)
-
----
-
-## 📁 GitHub Repository
-
-Source code: [https://github.com/silvano254/binti-events](https://github.com/silvano254/binti-events)
+Visit the full site: (https://wk-8-web-dev-assignment-beta.vercel.app/)
 
 ---
 ## 🧩 Pages Included
